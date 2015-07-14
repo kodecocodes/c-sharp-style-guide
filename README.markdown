@@ -18,25 +18,25 @@ style guides, and a tutorial-readability focused Swift style-guide. guide). This
 ## Table of Contents
 
 - [Nomenclature](#nomenclature)
-  + [Packages](#packages)
+  + [Namespaces](#namespaces)
   + [Classes & Interfaces](#classes--interfaces)
   + [Methods](#methods)
   + [Fields](#fields)
-  + [Variables & Parameters](#variables--parameters)
+  + [Parameters](#parameters--parameters)
+  + [Delegates](#delegates--delegates)
+  + [Events](#events--events)
   + [Misc](#misc)
 - [Declarations](#declarations)
   + [Access Level Modifiers](#access-level-modifiers)
   + [Fields & Variables](#fields--variables)
   + [Classes](#classes)
-  + [Enum Classes](#enum-classes)
+  + [Interfaces](#interfaces)
 - [Spacing](#spacing)
   + [Indentation](#indentation)
   + [Line Length](#line-length)
   + [Vertical Spacing](#vertical-spacing)
-- [Getters & Setters](#getters--setters)
 - [Brace Style](#brace-style)
 - [Switch Statements](#switch-statements)
-- [Annotations](#annotations)
 - [Language](#language)
 - [Copyright Statement](#copyright-statement)
 - [Smiley Face](#smiley-face)
@@ -47,22 +47,22 @@ style guides, and a tutorial-readability focused Swift style-guide. guide). This
 
 On the whole, naming should follow C# standards.
 
-### Packages
+### Namespaces
 
-Package names are all __UpperCamelCase__, multiple words concatenated together,
+Namespaces are all __UpperCamelCase__, multiple words concatenated together,
 without
 hypens or underscores:
 
 __BAD__:
 
 ```c#
-com.raywenderlich.funkywidget
+com.raywenderlich.fpsgame.hud.healthbar
 ```
 
 __GOOD__:
 
 ```c#
-Com.RayWenderlich.FunkyWidget
+RayWenderlich.FPSGame.HUD.Healthbar
 ```
 
 ### Classes & Interfaces
@@ -82,25 +82,38 @@ Written in __lowerCamelCase__.
 Static fields should be written in __UpperCamelCase__:
 
 ```c#
-public static final int TheAnswer = 42;
+public static int TheAnswer = 42;
 ```
 
-All fields are written __lowerCamelCase__. Per Unity convention, this includes __public fields__ as well.
+All non-static fields are written __lowerCamelCase__. Per Unity convention, this includes __public fields__ as well.
 
 For example:
 
 ```C#
 public class MyClass {
-  public static final int omeConstant = 42;
   public int publicField;
-  private static MyClass sSingleton;
   int packagePrivate;
   private int myPrivate;
   protected int myProtected;
 }
 ```
 
-### Variables & Parameters
+Private non-static fields should start with a lowercase letter.
+
+__BAD:__
+
+```c#
+private int _myPrivateVariable
+```
+
+__GOOD:__
+
+```c#
+private int myPrivateVariable
+```
+
+
+### Parameters
 
 Parameters are written in __lowerCamelCase__.
 
@@ -116,6 +129,49 @@ void doSomething(Vector3 location)
 ```
 
 Single character values to be avoided except for temporary looping variables.
+
+### Delegates
+
+Delegats are written in __UpperCamelCase__.
+
+When declaring delegates, DO add the suffix __EventHandler__ to names of delegates that are used in events. 
+
+__BAD:__
+
+```c#
+public delegate void Click()
+```
+__GOOD:__
+
+```c#
+public delegate void ClickEventHandler()
+```
+DO add the suffix __Callback__ to names of delegates other than those used as event handlers.
+
+__BAD:__
+
+```c#
+public delegate void Render()
+```
+__GOOD:__
+
+```c#
+public delegate void RenderCallback()
+```
+### Events
+
+Prefix event methods with the prefix __On__.
+
+__BAD:__
+
+```c#
+public static event CloseCallback Close;
+```
+__GOOD:__
+
+```c#
+public static event CloseCallback OnClose;
+```
 
 ### Misc
 
@@ -165,10 +221,26 @@ string twitterHandle;
 Exactly one class per source file, although inner classes are encouraged where
 scoping appropriate.
 
+### Interfaces
+
+All interfaces should be prefaced with the letter __I__. 
+
+__BAD:__
+
+```c#
+RadialSlider
+```
+
+__GOOD:__
+
+```c#
+IRadialSlider
+```
+
 ## Spacing
 
 Spacing is especially important in raywenderlich.com code, as code needs to be
-easily readable as part of the tutorial. Java does not lend itself well to this.
+easily readable as part of the tutorial. 
 
 ### Indentation
 
@@ -200,14 +272,14 @@ Indentation for line wraps should use 4 spaces (not the default 8):
 
 __BAD:__
 
-```java
+```c#
 CoolUiWidget widget =
         someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
 __GOOD:__
 
-```java
+```c#
 CoolUiWidget widget =
     someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
@@ -286,43 +358,9 @@ if (someTest) { doSomethingElse(); }
 
 ## Switch Statements
 
-Switch statements fall-through by default, but this can be unintuitive. If you
-require this behavior, comment it.
+Switch statements fall-through by default, but this can be unintuitive. Do not use fall-through behavior. 
 
 Alway include the `default` case.
-
-__BAD:__
-
-```c#
-switch (anInput) {
-  case 1:
-    doSomethingForCaseOne();
-  case 2:
-    doSomethingForCaseOneOrTwo();
-    break;
-  case 3:
-    doSomethingForCaseOneOrThree();
-    break;
-}
-```
-
-__GOOD:__
-
-```c#
-switch (anInput) {
-  case 1:
-    doSomethingForCaseOne();
-    // fall through
-  case 2:
-    doSomethingForCaseOneOrTwo();
-    break;
-  case 3:
-    doSomethingForCaseOneOrThree();
-    break;
-  default:
-    break;
-}
-```
 
 ## Language
 
