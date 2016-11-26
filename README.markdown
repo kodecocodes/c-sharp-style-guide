@@ -2,18 +2,13 @@
 
 This style guide is different from other you may see, because the focus is
 centered on readability for print and the web. We created this style guide to
-keep the code in our tutorials consistent. This style guide is based on the Java Style Guide. Being that the two languages have a lot in common, it makes sense to leverage the work being performed by the Android team.
+keep the code in our tutorials consistent.  
 
-Our overarching goals are __conciseness__, __readability__ and __simplicity__. Also, this guide is written to keep Unity in mind. 
-
-You should also check out out [Java](https://github.com/raywenderlich/java-style-guide), [Swift](https://github.com/raywenderlich/swift-style-guide),
-and [Objective-C](https://github.com/raywenderlich/objective-c-style-guide)
-style guides too.
+Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
 
 ## Inspiration
 
-This style-guide is somewhat of a mash-up between the existing C# language
-style guides, and a tutorial-readability focused Swift style-guide. guide). This style guide was created from the Java style guide and then altered from various C# / Unity style guides across the web.
+This style guide is based on C# and Unity conventions. 
 
 ## Table of Contents
 
@@ -49,127 +44,122 @@ On the whole, naming should follow C# standards.
 
 ### Namespaces
 
-Namespaces are all __UpperCamelCase__, multiple words concatenated together,
-without
-hypens or underscores:
+Namespaces are all **PascalCase**, multiple words concatenated together, without hypens ( - ) or underscores ( \_ ):
 
-__BAD__:
+**BAD**:
 
-```c#
+```csharp
 com.raywenderlich.fpsgame.hud.healthbar
 ```
 
-__GOOD__:
+**GOOD**:
 
-```c#
+```csharp
 RayWenderlich.FPSGame.HUD.Healthbar
 ```
 
 ### Classes & Interfaces
 
-Written in __UpperCamelCase__. For example `RadialSlider`. 
+Written in **PascalCase**. For example `RadialSlider`. 
 
 ### Methods
 
-Public methods are written in __UpperCamelCase__. For example `DoSomething`. 
-
-Private methods are written in __lowerCamelCase__. For example: `doSometing`
+Methods are written in **PascalCase**. For example `DoSomething()`. 
 
 ### Fields
 
-Written in __lowerCamelCase__.
-
-Static fields should be written in __UpperCamelCase__:
-
-```c#
-public static int TheAnswer = 42;
-```
-
-All non-static fields are written __lowerCamelCase__. Per Unity convention, this includes __public fields__ as well.
+All non-static fields are written **camelCase**. Per Unity convention, this includes **public fields** as well.
 
 For example:
 
-```C#
-public class MyClass {
-  public int publicField;
-  int packagePrivate;
-  private int myPrivate;
-  protected int myProtected;
+```csharp
+public class MyClass 
+{
+    public int publicField;
+    int packagePrivate;
+    private int myPrivate;
+    protected int myProtected;
 }
 ```
 
-Private non-static fields should start with a lowercase letter.
+**BAD:**
 
-__BAD:__
-
-```c#
+```csharp
 private int _myPrivateVariable
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 private int myPrivateVariable
 ```
 
+Static fields are the exception and should be written in **PascalCase**:
+
+```csharp
+public static int TheAnswer = 42;
+```
 
 ### Parameters
 
-Parameters are written in __lowerCamelCase__.
+Parameters are written in **camelCase**.
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 void doSomething(Vector3 Location)
 ```
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 void doSomething(Vector3 location)
 ```
 
-Single character values to be avoided except for temporary looping variables.
+Single character values are to be avoided except for temporary looping variables.
 
 ### Delegates
 
-Delegats are written in __UpperCamelCase__.
+Delegates are written in **PascalCase**.
 
-When declaring delegates, DO add the suffix __EventHandler__ to names of delegates that are used in events. 
+When declaring delegates, DO add the suffix **EventHandler** to names of delegates that are used in events. 
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 public delegate void Click()
 ```
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 public delegate void ClickEventHandler()
-```
-DO add the suffix __Callback__ to names of delegates other than those used as event handlers.
+```  
 
-__BAD:__
+DO add the suffix **Callback** to names of delegates other than those used as event handlers.
 
-```c#
+**BAD:**
+
+```csharp
 public delegate void Render()
 ```
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 public delegate void RenderCallback()
-```
+```  
+
 ### Events
 
-Prefix event methods with the prefix __On__.
+Prefix event methods with the prefix **On**.
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 public static event CloseCallback Close;
-```
-__GOOD:__
+```  
 
-```c#
+**GOOD:**
+
+```csharp
 public static event CloseCallback OnClose;
 ```
 
@@ -177,16 +167,17 @@ public static event CloseCallback OnClose;
 
 In code, acronyms should be treated as words. For example:
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 XMLHTTPRequest
 String URL
 findPostByID
-```
-__GOOD:__
+```  
 
-```c#
+**GOOD:**
+
+```csharp
 XmlHttpRequest
 String url
 findPostById
@@ -196,98 +187,96 @@ findPostById
 
 ### Access Level Modifiers
 
-Access level modifiers should be explicitly defined for classes, methods and
-member variables.
+Access level modifiers should be explicitly defined for classes, methods and member variables.
 
 ### Fields & Variables
 
 Prefer single declaration per line.
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 string username, twitterHandle;
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 string username;
 string twitterHandle;
 ```
 
 ### Classes
 
-Exactly one class per source file, although inner classes are encouraged where
-scoping appropriate.
+Exactly one class per source file, although inner classes are encouraged where scoping appropriate.
 
 ### Interfaces
 
-All interfaces should be prefaced with the letter __I__. 
+All interfaces should be prefaced with the letter **I**. 
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 RadialSlider
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 IRadialSlider
 ```
 
 ## Spacing
 
-Spacing is especially important in raywenderlich.com code, as code needs to be
-easily readable as part of the tutorial. 
+Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
 
 ### Indentation
 
-Indentation is using spaces - never tabs.
+Indentation should be done using **spaces** — never tabs.  
 
 #### Blocks
 
-Indentation for blocks uses 2 spaces (not the default 4):
+Indentation for blocks uses **4 spaces** for optimal readability:
 
-__BAD:__
+**BAD:**
 
-```c#
-for (int i = 0; i < 10; i++) {
-    Debug.Log("index=" + i);
+```csharp
+for (int i = 0; i < 10; i++) 
+{
+  Debug.Log("index=" + i);
 }
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
-for (int i = 0; i < 10; i++) {
-  Debug.Log("index=" + i);
+```csharp
+for (int i = 0; i < 10; i++) 
+{
+    Debug.Log("index=" + i);
 }
 ```
 
 #### Line Wraps
 
-Indentation for line wraps should use 4 spaces (not the default 8):
+Indentation for line wraps should use **4 spaces** (not the default 8):
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 CoolUiWidget widget =
         someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 CoolUiWidget widget =
     someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
 ### Line Length
 
-Lines should be no longer than 100 characters long.
-
+Lines should be no longer than **100** characters long.
 
 ### Vertical Spacing
 
@@ -299,89 +288,113 @@ several methods.
 
 ## Brace Style
 
-Only trailing closing-braces are awarded their own line. All others appear the
-same line as preceding code:
+All braces get their own line as it is a C# convention:
 
-__BAD:__
+**BAD:**
 
-```c#
-class MyClass
-{
-  void DoSomething()
-  {
-    if (someTest)
-    {
-      // ...
+```csharp
+class MyClass {
+    void DoSomething() {
+        if (someTest) {
+          // ...
+        } else {
+          // ...
+        }
     }
-    else
-    {
-      // ...
-    }
-  }
 }
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
-class MyClass {
-  void DoSomething() {
-    if (someTest) {
-      // ...
-    } else {
-      // ...
+```csharp
+class MyClass
+{
+    void DoSomething()
+    {
+        if (someTest)
+        {
+          // ...
+        }
+        else
+        {
+          // ...
+        }
     }
-  }
 }
 ```
 
 Conditional statements are always required to be enclosed with braces,
 irrespective of the number of lines required.
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 if (someTest)
-  doSomething();
+    doSomething();  
+
 if (someTest) doSomethingElse();
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
-if (someTest) {
-  doSomething();
-}
+```csharp
+if (someTest) 
+{
+    doSomething();
+}  
+
 if (someTest) { doSomethingElse(); }
 ```
-
-
 ## Switch Statements
 
-Switch statements fall-through by default, but this can be unintuitive. Do not use fall-through behavior. 
+Switch-statements come with `default` case by default (heh). When your code is written correctly, it should never reach this part.
+Never include the `default` case.
 
-Alway include the `default` case.
+**BAD:**  
+  
+```csharp
+switch (variable) {
+    case 1:
+        break;
+    case 2:
+        break;
+    default:
+        break;
+}
+```
+
+**GOOD:**  
+  
+```csharp
+switch (variable) {
+    case 1:
+        break;
+    case 2:
+        break;
+}
+```
 
 ## Language
 
 Use US English spelling.
 
-__BAD:__
+**BAD:**
 
-```c#
+```csharp
 string colour = "red";
 ```
 
-__GOOD:__
+**GOOD:**
 
-```c#
+```csharp
 string color = "red";
 ```
 
+The exception here is `MonoBehaviour` as that's what the class is actually called.
+
 ## Copyright Statement
 
-The following copyright statement should be included at the top of every source
-file:
+The following copyright statement should be included at the top of every source file:
 
     /*
      * Copyright (c) 2016 Razeware LLC
@@ -408,19 +421,17 @@ file:
 ## Smiley Face
 
 Smiley faces are a very prominent style feature of the raywenderlich.com site!
-It is very important to have the correct smile signifying the immense amount of
-happiness and excitement for the coding topic. The closing square bracket ] is
-used because it represents the largest smile able to be captured using ASCII
-art. A closing parenthesis ) creates a half-hearted smile, and thus is not
-preferred.
+It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
 
-Bad:
+**BAD**:
 
-    :)
+:)
 
-Good:
+**GOOD**:
 
-    :]
+:]  
+  
+>> **NOTE**: Do not use smileys in your scripts.
 
 ## Credits
 
@@ -430,6 +441,7 @@ raywenderlich.com team members:
 - [Darryl Bayliss](https://github.com/DarrylBayliss)
 - [Sam Davies](https://github.com/sammyd)
 - [Mic Pringle](https://github.com/micpringle)
-- [Brian Moakley] (https://github.com/VegetarianZombie)
+- [Brian Moakley](https://github.com/VegetarianZombie)
 - [Ray Wenderlich](https://github.com/rwenderlich)
+- [Eric Van de Kerckhove](https://github.com/BlackDragonBE)
 
