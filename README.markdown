@@ -353,7 +353,8 @@ Never include the `default` case.
 **BAD:**  
   
 ```csharp
-switch (variable) {
+switch (variable) 
+{
     case 1:
         break;
     case 2:
@@ -366,7 +367,8 @@ switch (variable) {
 **GOOD:**  
   
 ```csharp
-switch (variable) {
+switch (variable) 
+{
     case 1:
         break;
     case 2:
