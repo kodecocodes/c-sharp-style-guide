@@ -112,7 +112,7 @@ void doSomething(Vector3 Location)
 **GOOD:**
 
 ```csharp
-void doSomething(Vector3 location)
+void DoSomething(Vector3 location)
 ```
 
 Single character values are to be avoided except for temporary looping variables.
@@ -340,10 +340,13 @@ if (someTest) doSomethingElse();
 ```csharp
 if (someTest) 
 {
-    doSomething();
+    DoSomething();
 }  
 
-if (someTest) { doSomethingElse(); }
+if (someTest)
+{
+    DoSomethingElse();
+}
 ```
 ## Switch Statements
 
