@@ -2,13 +2,13 @@
 
 This style guide is different from other you may see, because the focus is
 centered on readability for print and the web. We created this style guide to
-keep the code in our tutorials consistent.  
+keep the code in our tutorials consistent.
 
-Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
+Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind.
 
 ## Inspiration
 
-This style guide is based on C# and Unity conventions. 
+This style guide is based on C# and Unity conventions.
 
 ## Table of Contents
 
@@ -37,7 +37,6 @@ This style guide is based on C# and Unity conventions.
 - [Smiley Face](#smiley-face)
 - [Credit](#credits)
 
-
 ## Nomenclature
 
 On the whole, naming should follow C# standards.
@@ -60,11 +59,11 @@ RayWenderlich.FPSGame.HUD.Healthbar
 
 ### Classes & Interfaces
 
-Written in **PascalCase**. For example `RadialSlider`. 
+Written in **PascalCase**. For example `RadialSlider`.
 
 ### Methods
 
-Methods are written in **PascalCase**. For example `DoSomething()`. 
+Methods are written in **PascalCase**. For example `DoSomething()`.
 
 ### Fields
 
@@ -73,7 +72,7 @@ All non-static fields are written **camelCase**. Per Unity convention, this incl
 For example:
 
 ```csharp
-public class MyClass 
+public class MyClass
 {
     public int publicField;
     int packagePrivate;
@@ -109,6 +108,7 @@ Parameters are written in **camelCase**.
 ```csharp
 void doSomething(Vector3 Location)
 ```
+
 **GOOD:**
 
 ```csharp
@@ -121,18 +121,19 @@ Single character values are to be avoided except for temporary looping variables
 
 Delegates are written in **PascalCase**.
 
-When declaring delegates, DO add the suffix **EventHandler** to names of delegates that are used in events. 
+When declaring delegates, DO add the suffix **EventHandler** to names of delegates that are used in events.
 
 **BAD:**
 
 ```csharp
 public delegate void Click()
 ```
+
 **GOOD:**
 
 ```csharp
 public delegate void ClickEventHandler()
-```  
+```
 
 DO add the suffix **Callback** to names of delegates other than those used as event handlers.
 
@@ -141,11 +142,12 @@ DO add the suffix **Callback** to names of delegates other than those used as ev
 ```csharp
 public delegate void Render()
 ```
+
 **GOOD:**
 
 ```csharp
 public delegate void RenderCallback()
-```  
+```
 
 ### Events
 
@@ -155,7 +157,7 @@ Prefix event methods with the prefix **On**.
 
 ```csharp
 public static event CloseCallback Close;
-```  
+```
 
 **GOOD:**
 
@@ -173,7 +175,7 @@ In code, acronyms should be treated as words. For example:
 XMLHTTPRequest
 String URL
 findPostByID
-```  
+```
 
 **GOOD:**
 
@@ -212,7 +214,7 @@ Exactly one class per source file, although inner classes are encouraged where s
 
 ### Interfaces
 
-All interfaces should be prefaced with the letter **I**. 
+All interfaces should be prefaced with the letter **I**.
 
 **BAD:**
 
@@ -228,11 +230,11 @@ IRadialSlider
 
 ## Spacing
 
-Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
+Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial.
 
 ### Indentation
 
-Indentation should be done using **spaces** — never tabs.  
+Indentation should be done using **spaces** — never tabs.
 
 #### Blocks
 
@@ -241,7 +243,7 @@ Indentation for blocks uses **4 spaces** for optimal readability:
 **BAD:**
 
 ```csharp
-for (int i = 0; i < 10; i++) 
+for (int i = 0; i < 10; i++)
 {
   Debug.Log("index=" + i);
 }
@@ -250,7 +252,7 @@ for (int i = 0; i < 10; i++)
 **GOOD:**
 
 ```csharp
-for (int i = 0; i < 10; i++) 
+for (int i = 0; i < 10; i++)
 {
     Debug.Log("index=" + i);
 }
@@ -280,11 +282,10 @@ Lines should be no longer than **100** characters long.
 
 ### Vertical Spacing
 
-There should be exactly one blank line between methods to aid in visual clarity 
-and organization. Whitespace within methods should separate functionality, but 
+There should be exactly one blank line between methods to aid in visual clarity
+and organization. Whitespace within methods should separate functionality, but
 having too many sections in a method often means you should refactor into
 several methods.
-
 
 ## Brace Style
 
@@ -330,7 +331,7 @@ irrespective of the number of lines required.
 
 ```csharp
 if (someTest)
-    doSomething();  
+    doSomething();
 
 if (someTest) doSomethingElse();
 ```
@@ -338,25 +339,26 @@ if (someTest) doSomethingElse();
 **GOOD:**
 
 ```csharp
-if (someTest) 
+if (someTest)
 {
     DoSomething();
-}  
+}
 
 if (someTest)
 {
     DoSomethingElse();
 }
 ```
+
 ## Switch Statements
 
 Switch-statements come with `default` case by default (heh). When your code is written correctly, it should never reach this part.
 Never include the `default` case.
 
-**BAD:**  
-  
+**BAD:**
+
 ```csharp
-switch (variable) 
+switch (variable)
 {
     case 1:
         break;
@@ -367,10 +369,10 @@ switch (variable)
 }
 ```
 
-**GOOD:**  
-  
+**GOOD:**
+
 ```csharp
-switch (variable) 
+switch (variable)
 {
     case 1:
         break;
@@ -403,17 +405,17 @@ The following copyright statement should be included at the top of every source 
 
     /*
      * Copyright (c) 2017 Razeware LLC
-     * 
+     *
      * Permission is hereby granted, free of charge, to any person obtaining a copy
      * of this software and associated documentation files (the "Software"), to deal
      * in the Software without restriction, including without limitation the rights
      * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
      * copies of the Software, and to permit persons to whom the Software is
      * furnished to do so, subject to the following conditions:
-     * 
+     *
      * The above copyright notice and this permission notice shall be included in
      * all copies or substantial portions of the Software.
-     * 
+     *
      * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
      * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
      * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -434,8 +436,8 @@ It is very important to have the correct smile signifying the immense amount of 
 
 **GOOD**:
 
-:]  
-  
+:]
+
 >> **NOTE**: Do not use smileys in your scripts.
 
 ## Credits
@@ -449,4 +451,3 @@ raywenderlich.com team members:
 - [Brian Moakley](https://github.com/VegetarianZombie)
 - [Ray Wenderlich](https://github.com/rwenderlich)
 - [Eric Van de Kerckhove](https://github.com/BlackDragonBE)
-
