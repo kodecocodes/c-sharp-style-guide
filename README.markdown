@@ -107,7 +107,7 @@ Parameters are written in **camelCase**.
 **BAD:**
 
 ```csharp
-void doSomething(Vector3 Location)
+void DoSomething(Vector3 Location)
 ```
 **GOOD:**
 
