@@ -112,7 +112,7 @@ void DoSomething(Vector3 Location)
 **GOOD:**
 
 ```csharp
-void DoSomething(Vector3 location)
+void doSomething(Vector3 location)
 ```
 
 Single character values are to be avoided except for temporary looping variables.
