@@ -55,7 +55,7 @@ com.raywenderlich.fpsgame.hud.healthbar
 **GOOD**:
 
 ```csharp
-RayWenderlich.FPSGame.HUD.Healthbar
+RayWenderlich.FpsGame.Hud.Healthbar
 ```
 
 ### Classes & Interfaces
