@@ -350,10 +350,9 @@ if (someTest)
 ```
 ## Switch Statements
 
-Switch-statements come with `default` case by default (heh). When your code is written correctly, it should never reach this part.
-Never include the `default` case.
+Switch-statements come with `default` case by default (heh). If the `default` case is never reached, be sure to remove it.
 
-**BAD:**  
+**DEFAULT GETS USED:**  
   
 ```csharp
 switch (variable) 
@@ -367,7 +366,7 @@ switch (variable)
 }
 ```
 
-**GOOD:**  
+**DEFAULT DOESN'T GET USED:**  
   
 ```csharp
 switch (variable) 
