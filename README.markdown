@@ -149,18 +149,18 @@ public delegate void RenderCallback()
 
 ### Events
 
-Prefix event methods with the prefix **On**.
+Events should be written in **PascalCase**. Never prefix events with a prefix like **On**.
 
 **BAD:**
 
 ```csharp
-public static event CloseCallback Close;
+public static event CloseCallback OnClose;
 ```  
 
 **GOOD:**
 
 ```csharp
-public static event CloseCallback OnClose;
+public static event CloseCallback Close;
 ```
 
 ### Misc
