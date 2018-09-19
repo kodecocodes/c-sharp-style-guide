@@ -44,7 +44,7 @@ On the whole, naming should follow C# standards.
 
 ### Namespaces
 
-Namespaces are all **PascalCase**, multiple words concatenated together, without hypens ( - ) or underscores ( \_ ):
+Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ):
 
 **BAD**:
 
