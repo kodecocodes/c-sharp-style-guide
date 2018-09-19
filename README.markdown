@@ -44,7 +44,7 @@ On the whole, naming should follow C# standards.
 
 ### Namespaces
 
-Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ):
+Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ). The exception to this rule are acronyms like GUI or HUD, which can be uppercase:
 
 **BAD**:
 
@@ -55,7 +55,7 @@ com.raywenderlich.fpsgame.hud.healthbar
 **GOOD**:
 
 ```csharp
-RayWenderlich.FpsGame.Hud.Healthbar
+RayWenderlich.FPSGame.HUD.Healthbar
 ```
 
 ### Classes & Interfaces
