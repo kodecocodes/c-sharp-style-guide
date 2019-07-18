@@ -1,4 +1,4 @@
-# The Official raywenderlich.com C# Style Guide
+﻿# The Official raywenderlich.com C# Style Guide
 
 This style guide is different from other you may see, because the focus is
 centered on readability for print and the web. We created this style guide to
@@ -60,7 +60,7 @@ RayWenderlich.FPSGame.HUD.Healthbar
 
 ### Classes & Interfaces
 
-Written in **PascalCase**. For example `RadialSlider`. 
+Classes and interfaces are written in **PascalCase**. For example `RadialSlider`. 
 
 ### Methods
 
@@ -98,6 +98,17 @@ Static fields are the exception and should be written in **PascalCase**:
 
 ```csharp
 public static int TheAnswer = 42;
+```
+### Properties
+
+All properties are written in **PascalCase**. For example:
+
+```csharp
+public int PageNumber 
+{
+    get { return pageNumber; }
+    set { pageNumber = value; }
+}
 ```
 
 ### Parameters
