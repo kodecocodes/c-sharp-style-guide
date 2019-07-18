@@ -128,50 +128,12 @@ void DoSomething(Vector3 location)
 
 Single character values are to be avoided except for temporary looping variables.
 
-### Delegates
+### Actions
 
-Delegates are written in **PascalCase**.
-
-When declaring delegates, DO add the suffix **EventHandler** to names of delegates that are used in events. 
-
-**BAD:**
+Actions are written in **PascalCase**. For example:
 
 ```csharp
-public delegate void Click()
-```
-**GOOD:**
-
-```csharp
-public delegate void ClickEventHandler()
-```  
-
-DO add the suffix **Callback** to names of delegates other than those used as event handlers.
-
-**BAD:**
-
-```csharp
-public delegate void Render()
-```
-**GOOD:**
-
-```csharp
-public delegate void RenderCallback()
-```  
-
-### Events
-
-Events should be written in **PascalCase**. Never prefix events with a prefix like **On**.
-
-**BAD:**
-
-```csharp
-public static event CloseCallback OnClose;
-```  
-
-**GOOD:**
-
-```csharp
-public static event CloseCallback Close;
+public event Action<int> ValueChanged;
 ```
 
 ### Misc
