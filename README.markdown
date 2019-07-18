@@ -46,13 +46,13 @@ On the whole, naming should follow C# standards.
 
 Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ). The exception to this rule are acronyms like GUI or HUD, which can be uppercase:
 
-**BAD**:
+**AVOID**:
 
 ```csharp
 com.raywenderlich.fpsgame.hud.healthbar
 ```
 
-**GOOD**:
+**PREFER**:
 
 ```csharp
 RayWenderlich.FPSGame.HUD.Healthbar
@@ -82,13 +82,13 @@ public class MyClass
 }
 ```
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 private int _myPrivateVariable
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 private int myPrivateVariable
@@ -115,12 +115,13 @@ public int PageNumber
 
 Parameters are written in **camelCase**.
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 void DoSomething(Vector3 Location)
 ```
-**GOOD:**
+
+**PREFER:**
 
 ```csharp
 void DoSomething(Vector3 location)
@@ -140,7 +141,7 @@ public event Action<int> ValueChanged;
 
 In code, acronyms should be treated as words. For example:
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 XMLHTTPRequest
@@ -148,7 +149,7 @@ String URL
 findPostByID
 ```  
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 XmlHttpRequest
@@ -166,13 +167,13 @@ Access level modifiers should be explicitly defined for classes, methods and mem
 
 Prefer single declaration per line.
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 string username, twitterHandle;
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 string username;
@@ -187,13 +188,13 @@ Exactly one class per source file, although inner classes are encouraged where s
 
 All interfaces should be prefaced with the letter **I**. 
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 RadialSlider
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 IRadialSlider
@@ -211,7 +212,7 @@ Indentation should be done using **spaces** — never tabs.
 
 Indentation for blocks uses **4 spaces** for optimal readability:
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 for (int i = 0; i < 10; i++) 
@@ -220,7 +221,7 @@ for (int i = 0; i < 10; i++)
 }
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 for (int i = 0; i < 10; i++) 
@@ -233,14 +234,14 @@ for (int i = 0; i < 10; i++)
 
 Indentation for line wraps should use **4 spaces** (not the default 8):
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 CoolUiWidget widget =
         someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 CoolUiWidget widget =
@@ -263,7 +264,7 @@ several methods.
 
 All braces get their own line as it is a C# convention:
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 class MyClass {
@@ -277,7 +278,7 @@ class MyClass {
 }
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 class MyClass
@@ -299,7 +300,7 @@ class MyClass
 Conditional statements are always required to be enclosed with braces,
 irrespective of the number of lines required.
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 if (someTest)
@@ -308,7 +309,7 @@ if (someTest)
 if (someTest) doSomethingElse();
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 if (someTest) 
@@ -325,7 +326,7 @@ if (someTest)
 
 Switch-statements come with `default` case by default (heh). If the `default` case is never reached, be sure to remove it.
 
-**DEFAULT GETS USED:**  
+**AVOID:**  
   
 ```csharp
 switch (variable) 
@@ -339,7 +340,7 @@ switch (variable)
 }
 ```
 
-**DEFAULT DOESN'T GET USED:**  
+**PREFER:**  
   
 ```csharp
 switch (variable) 
@@ -355,13 +356,13 @@ switch (variable)
 
 Use US English spelling.
 
-**BAD:**
+**AVOID:**
 
 ```csharp
 string colour = "red";
 ```
 
-**GOOD:**
+**PREFER:**
 
 ```csharp
 string color = "red";
@@ -408,11 +409,11 @@ The following copyright statement should be included at the top of every source 
 Smiley faces are a very prominent style feature of the raywenderlich.com site!
 It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
 
-**BAD**:
+**AVOID**:
 
 :)
 
-**GOOD**:
+**PREFER**:
 
 :]  
   
