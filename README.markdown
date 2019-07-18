@@ -1,6 +1,6 @@
 ﻿# The Official raywenderlich.com C# Style Guide
 
-This style guide is different from other you may see, because the focus is
+This style guide is different from others you may find, because the focus is
 centered on readability for print and the web. We created this style guide to
 keep the code in our tutorials consistent.  
 
@@ -454,7 +454,7 @@ It is very important to have the correct smile signifying the immense amount of 
 
 :]  
   
->> **NOTE**: Do not use smileys in your scripts.
+> **NOTE**: Do not use smileys in your scripts.
 
 ## Credits
 
