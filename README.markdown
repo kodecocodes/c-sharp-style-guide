@@ -1,79 +1,118 @@
-﻿# The Official raywenderlich.com C# Style Guide
+## Авторские Права
 
-This style guide is different from others you may find, because the focus is
-centered on readability for print and the web. We created this style guide to
-keep the code in our tutorials consistent.  
+Следующее заявление об авторских правах должно быть включено в верхнюю часть каждого файла-источника:
 
-Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
+    /*
+     * Copyright (c) 2020 Razeware LLC
+     *
+     * Permission is hereby granted, free of charge, to any person obtaining a copy
+     * of this software and associated documentation files (the "Software"), to deal
+     * in the Software without restriction, including without limitation the rights
+     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+     * copies of the Software, and to permit persons to whom the Software is
+     * furnished to do so, subject to the following conditions:
+     *
+     * The above copyright notice and this permission notice shall be included in
+     * all copies or substantial portions of the Software.
+     *
+     * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+     * distribute, sublicense, create a derivative work, and/or sell copies of the
+     * Software in any work that is designed, intended, or marketed for pedagogical or
+     * instructional purposes related to programming, coding, application development,
+     * or information technology.  Permission for such use, copying, modification,
+     * merger, publication, distribution, sublicensing, creation of derivative works,
+     * or sale is expressly withheld.
+     *
+     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+     * THE SOFTWARE.
+     */
 
-## Inspiration
+# The Official raywenderlich.com C# Style Guide
 
-This style guide is based on C# and Unity conventions. 
+Это руководство по стилю отличается от всех остальных, которые ты мог встречать,
+потому как оно сконцентрировано на поставлении удобочитаемости для печати и интернета.
+Мы создали этот Style Guide для поддержки последовательного кода в наших пособиях.
 
-## Table of Contents
+Нашими главными целями являются: **краткость**, **удобочитаемость**, **простота**. Кроме того руководство написано, учитывая соглашение **Unity**.
 
-- [Nomenclature](#nomenclature)
-  + [Namespaces](#namespaces)
-  + [Classes & Interfaces](#classes--interfaces)
-  + [Methods](#methods)
-  + [Fields](#fields)
-  + [Parameters](#parameters--parameters)
-  + [Delegates](#delegates--delegates)
-  + [Events](#events--events)
-  + [Misc](#misc)
-- [Declarations](#declarations)
-  + [Access Level Modifiers](#access-level-modifiers)
-  + [Fields & Variables](#fields--variables)
-  + [Classes](#classes)
-  + [Interfaces](#interfaces)
-- [Spacing](#spacing)
-  + [Indentation](#indentation)
-  + [Line Length](#line-length)
-  + [Vertical Spacing](#vertical-spacing)
-- [Brace Style](#brace-style)
-- [Switch Statements](#switch-statements)
-- [Language](#language)
-- [Copyright Statement](#copyright-statement)
-- [Smiley Face](#smiley-face)
-- [Credit](#credits)
+## Вдохновение
+
+Это руководство по стилю основано на соглашениях от C# и Unity
+
+## Содержание
+
+- [Список](#Список)
+  + [Именное Пространство](#Именное-Пространство)
+  + [Классы & Интерфейсы](#Классы--Интерфейсы)
+  + [Методы](#Методы)
+  + [Поля](#Поля)
+  + [Свойства](#Свойства)
+  + [Параметры](#Параметры)
+  + Делегаты
+  + [События](#События)
+  + [Разное](#Разное)
+- [Декларации](#Декларации)
+  + [Модификаторы Доступа](#Модификаторы-Доступа)
+  + [Поля & Переменные](#Поля--Переменные)
+  + [Классы](#Классы)
+  + [Интерфейсы](#Интерфейсы)
+- [Пространство](#Пространство)
+  + [Отступы](#Отступы)
+  + [Блоки Кода](#Блоки-Кода)
+  + [Табуляция](#Табуляция)
+  + [Длина Строки](#Длина-Строки)
+  + [Вертикальное Пространство](#Вертикальное-Пространство)
+- [Фигурные Скобки](#Фигурные-Скобки)
+- [Условия](#Условия)
+- [Оператор Switch](#Оператор-Switch)
+- [Язык](#Язык)
+- [Авторские Права](#Авторские-Права)
+- [Смайл](#Смайл)
+- [Кредиты](#Кредиты)
 
 
-## Nomenclature
+## Список
 
-On the whole, naming should follow C# standards.
+В целом, именование должно соответствовать стандартам C#.
 
-### Namespaces
+### Именное Пространство
 
-Namespaces are all **PascalCase**, multiple words concatenated together, without hyphens ( - ) or underscores ( \_ ). The exception to this rule are acronyms like GUI or HUD, which can be uppercase:
+Всё именное пространство написано в **PascalCase**, несколько слов в одном соединенны вместе, без дефисов ( - ) или подчеркивания ( \_ ).
+Исключением из этого правила являются аббревиатуры типа GUI или HUD, которые могут быть в верхнем регистре:
 
-**AVOID**:
+**Неверно**:
 
 ```csharp
 com.raywenderlich.fpsgame.hud.healthbar
 ```
 
-**PREFER**:
+**Верно**:
 
 ```csharp
 RayWenderlich.FPSGame.HUD.Healthbar
 ```
 
-### Classes & Interfaces
+### Классы & Интерфейсы
 
-Classes and interfaces are written in **PascalCase**. For example `RadialSlider`. 
+Классы и интерфейсы написаны в **PascalCase**. Например: `RadialSlider`.
 
-### Methods
+### Методы
 
-Methods are written in **PascalCase**. For example `DoSomething()`. 
+Методы написаны в **PascalCase**. Например: `DoSomething()`.
 
-### Fields
+### Поля
 
-All non-static fields are written **camelCase**. Per Unity convention, this includes **public fields** as well.
+Все нестатические поля написаны **camelCase**. В соответствии с соглашением Unity, включая **общедоступные поля**.
 
 For example:
 
 ```csharp
-public class MyClass 
+public class MyClass
 {
     public int publicField;
     int packagePrivate;
@@ -82,74 +121,74 @@ public class MyClass
 }
 ```
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 private int _myPrivateVariable
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 private int myPrivateVariable
 ```
 
-Static fields are the exception and should be written in **PascalCase**:
+Статические поля являются исключением и следуют быть написаны в **PascalCase**:
 
 ```csharp
 public static int TheAnswer = 42;
 ```
-### Properties
+### Свойства
 
-All properties are written in **PascalCase**. For example:
+Все свойства записаны в **PascalCase**. Например:
 
 ```csharp
-public int PageNumber 
+public int PageNumber
 {
     get { return pageNumber; }
     set { pageNumber = value; }
 }
 ```
 
-### Parameters
+### Параметры
 
-Parameters are written in **camelCase**.
+Параметры написаны в **camelCase**.
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 void DoSomething(Vector3 Location)
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 void DoSomething(Vector3 location)
 ```
 
-Single character values are to be avoided except for temporary looping variables.
+Следует избегать односимвольных значений, за исключением временных цикловых переменных.
 
-### Actions
+### События
 
-Actions are written in **PascalCase**. For example:
+Действия написаны в **PascalCase**. Например:
 
 ```csharp
 public event Action<int> ValueChanged;
 ```
 
-### Misc
+### Разное
 
-In code, acronyms should be treated as words. For example:
+Аббревиатуры в коде следует трактовать в нижнем регистре. Например:
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 XMLHTTPRequest
 String URL
 findPostByID
-```  
+```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 XmlHttpRequest
@@ -157,114 +196,114 @@ String url
 findPostById
 ```
 
-## Declarations
+## Декларации
 
-### Access Level Modifiers
+### Модификаторы Доступа
 
-Access level modifiers should be explicitly defined for classes, methods and member variables.
+Модификаторы доступа должны быть явно определены для классов, методов и участников переменных.
 
-### Fields & Variables
+### Поля & Переменные
 
-Prefer single declaration per line.
+Преподчтительнее записывать переменные единой декларации в одну строку
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 string username, twitterHandle;
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 string username;
 string twitterHandle;
 ```
 
-### Classes
+### Классы
 
-Exactly one class per source file, although inner classes are encouraged where scoping appropriate.
+Ровно по одному классу на каждый исходный файл, хотя в соответствующих случаях одобряются внутренние классы.
 
-### Interfaces
+### Интерфейсы
 
-All interfaces should be prefaced with the letter **I**. 
+Все интерфейсы должны быть предопределены буквой **I**.
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 RadialSlider
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 IRadialSlider
 ```
 
-## Spacing
+## Пространство
 
-Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
+Пространство особенно важно в коде raywenderlich.com, т.к. код должен быть легко читаемым как часть руководства.
 
-### Indentation
+### Отступы
 
-Indentation should be done using **spaces** — never tabs.  
+Отступы должны всегда содержать только **пробелы**.
 
-#### Blocks
+#### Блоки Кода
 
-Indentation for blocks uses **4 spaces** for optimal readability:
+Отступы в блоках кода следует использовать длиной в **4 пробела** для оптимальной читабельности:
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
-for (int i = 0; i < 10; i++) 
+for (int i = 0; i < 10; i++)
 {
   Debug.Log("index=" + i);
 }
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
-for (int i = 0; i < 10; i++) 
+for (int i = 0; i < 10; i++)
 {
     Debug.Log("index=" + i);
 }
 ```
 
-#### Line Wraps
+#### Табуляция
 
-Indentation for line wraps should use **4 spaces** (not the default 8):
+Мы советуем Вас использовать табуляцию в **4 пробела** (а не по умолчанию 8):
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 CoolUiWidget widget =
         someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 CoolUiWidget widget =
     someIncrediblyLongExpression(that, reallyWouldNotFit, on, aSingle, line);
 ```
 
-### Line Length
+### Длина Строки
 
-Lines should be no longer than **100** characters long.
+Вся строка должна быть длиной не более, чем в **100** символов.
 
-### Vertical Spacing
+### Вертикальное Пространство
 
-There should be exactly one blank line between methods to aid in visual clarity 
-and organization. Whitespace within methods should separate functionality, but 
-having too many sections in a method often means you should refactor into
-several methods.
+Должна присутствовать одна пустая линия между методами, чтобы легко визуально ориентироваться и 
+вести организованный код. Пробелы в методах должны разделять функциональность, но 
+наличие слишком большого количества секций в методе зачастую означает, что вы должны проводить рефакторинг в
+несколько методов.
 
 
-## Brace Style
+## Фигурные Скобки
 
-All braces get their own line as it is a C# convention:
+Все фигурные скобки расположены на *отдельно выделенной* строке (т.к. это является оф. соглашением C#):
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 class MyClass {
@@ -278,7 +317,7 @@ class MyClass {
 }
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 class MyClass
@@ -297,39 +336,41 @@ class MyClass
 }
 ```
 
-Conditional statements are always required to be enclosed with braces,
-irrespective of the number of lines required.
+## Условия
 
-**AVOID:**
+Условные операторы всегда должны использоваться в комплекте со скобками,
+независимо от количества строк.
+
+**НЕВЕРНО:**
 
 ```csharp
 if (someTest)
-    doSomething();  
+    doSomething();
 
 if (someTest) doSomethingElse();
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
-if (someTest) 
+if (someTest)
 {
     DoSomething();
-}  
+}
 
 if (someTest)
 {
     DoSomethingElse();
 }
 ```
-## Switch Statements
+## Оператор Switch
 
-Switch-statements come with `default` case by default (heh). If the `default` case is never reached, be sure to remove it.
+Оператор Switch привычно использовать с `default` в конце. Если кусок `default` никогда не используется, то смело от него избавляйтесь.
 
-**AVOID:**  
-  
+**НЕВЕРНО:**
+
 ```csharp
-switch (variable) 
+switch (variable)
 {
     case 1:
         break;
@@ -340,10 +381,10 @@ switch (variable)
 }
 ```
 
-**PREFER:**  
-  
+**ВЕРНО:**
+
 ```csharp
-switch (variable) 
+switch (variable)
 {
     case 1:
         break;
@@ -352,77 +393,43 @@ switch (variable)
 }
 ```
 
-## Language
+## Язык
 
-Use US English spelling.
+Используйте правописание на американском английском языке.
 
-**AVOID:**
+**НЕВЕРНО:**
 
 ```csharp
 string colour = "red";
 ```
 
-**PREFER:**
+**ВЕРНО:**
 
 ```csharp
 string color = "red";
 ```
 
-The exception here is `MonoBehaviour` as that's what the class is actually called.
+Исключение составляет `MonoBehaviour`, т.к. именно так на самом деле класс уже назван.
 
-## Copyright Statement
+## Смайл
 
-The following copyright statement should be included at the top of every source file:
+Улыбающиеся лица - очень заметная стилистическая особенность сайта raywenderlich.com!
+Очень важно, чтобы правильная улыбка означала огромное количество счастья и азарта на тему кодирования. Закрывающаяся квадратная скобка ] используется потому, что она представляет собой самую большую улыбку, которую можно запечатлеть, используя ASCII-арт. Заключительная скобка ("**:)**") создает улыбку с полусердечием, и поэтому она не является предпочтительной.
 
-    /*
-     * Copyright (c) 2020 Razeware LLC
-     * 
-     * Permission is hereby granted, free of charge, to any person obtaining a copy
-     * of this software and associated documentation files (the "Software"), to deal
-     * in the Software without restriction, including without limitation the rights
-     * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-     * copies of the Software, and to permit persons to whom the Software is
-     * furnished to do so, subject to the following conditions:
-     * 
-     * The above copyright notice and this permission notice shall be included in
-     * all copies or substantial portions of the Software.
-     *
-     * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish, 
-     * distribute, sublicense, create a derivative work, and/or sell copies of the 
-     * Software in any work that is designed, intended, or marketed for pedagogical or 
-     * instructional purposes related to programming, coding, application development, 
-     * or information technology.  Permission for such use, copying, modification,
-     * merger, publication, distribution, sublicensing, creation of derivative works, 
-     * or sale is expressly withheld.
-     *    
-     * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-     * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-     * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-     * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-     * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-     * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-     * THE SOFTWARE.
-     */
-
-## Smiley Face
-
-Smiley faces are a very prominent style feature of the raywenderlich.com site!
-It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
-
-**AVOID**:
+**Неверно**:
 
 :)
 
-**PREFER**:
+**Верно**:
 
-:]  
-  
-> **NOTE**: Do not use smileys in your scripts.
+:]
 
-## Credits
+> **Заметка**: Не используйте смайлы в своих скриптах.
 
-This style guide is a collaborative effort from the most stylish
-raywenderlich.com team members:
+## Кредиты
+
+Это руководство по стилю является результатом совместных усилий наиболее стильных
+членов команды raywenderlich.com:
 
 - [Darryl Bayliss](https://github.com/DarrylBayliss)
 - [Sam Davies](https://github.com/sammyd)
