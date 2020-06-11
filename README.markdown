@@ -109,7 +109,7 @@ RayWenderlich.FPSGame.HUD.Healthbar
 
 Все нестатические поля написаны **camelCase**. В соответствии с соглашением Unity, включая **общедоступные поля**.
 
-For example:
+Например:
 
 ```csharp
 public class MyClass
