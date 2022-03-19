@@ -404,6 +404,10 @@ The following copyright statement should be included at the top of every source 
      * THE SOFTWARE.
      */
 
+In this repository, copy the **ScripTemplates** folder into your own Unity **Assets** folder. This way the header above will be included in new scripts.
+
+> **NOTE**: You may need to close and reopen Unity in order for it to start picking up the template.
+
 ## Smiley Face
 
 Smiley faces are a very prominent style feature of the raywenderlich.com site!
