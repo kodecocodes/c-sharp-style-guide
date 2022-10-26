@@ -12,30 +12,35 @@ This style guide is based on C# and Unity conventions.
 
 ## Table of Contents
 
-- [Nomenclature](#nomenclature)
-  + [Namespaces](#namespaces)
-  + [Classes & Interfaces](#classes--interfaces)
-  + [Methods](#methods)
-  + [Fields](#fields)
-  + [Parameters](#parameters--parameters)
-  + [Delegates](#delegates--delegates)
-  + [Events](#events--events)
-  + [Misc](#misc)
-- [Declarations](#declarations)
-  + [Access Level Modifiers](#access-level-modifiers)
-  + [Fields & Variables](#fields--variables)
-  + [Classes](#classes)
-  + [Interfaces](#interfaces)
-- [Spacing](#spacing)
-  + [Indentation](#indentation)
-  + [Line Length](#line-length)
-  + [Vertical Spacing](#vertical-spacing)
-- [Brace Style](#brace-style)
-- [Switch Statements](#switch-statements)
-- [Language](#language)
-- [Copyright Statement](#copyright-statement)
-- [Smiley Face](#smiley-face)
-- [Credit](#credits)
+- [The Official raywenderlich.com C# Style Guide](#the-official-raywenderlichcom-c-style-guide)
+  - [Inspiration](#inspiration)
+  - [Table of Contents](#table-of-contents)
+  - [Nomenclature](#nomenclature)
+    - [Namespaces](#namespaces)
+    - [Classes & Interfaces](#classes--interfaces)
+    - [Methods](#methods)
+    - [Fields](#fields)
+    - [Properties](#properties)
+    - [Parameters](#parameters)
+    - [Actions](#actions)
+    - [Misc](#misc)
+  - [Declarations](#declarations)
+    - [Access Level Modifiers](#access-level-modifiers)
+    - [Fields & Variables](#fields--variables)
+    - [Classes](#classes)
+    - [Interfaces](#interfaces)
+  - [Spacing](#spacing)
+    - [Indentation](#indentation)
+      - [Blocks](#blocks)
+      - [Line Wraps](#line-wraps)
+    - [Line Length](#line-length)
+    - [Vertical Spacing](#vertical-spacing)
+  - [Brace Style](#brace-style)
+  - [Switch Statements](#switch-statements)
+  - [Language](#language)
+  - [Copyright Statement](#copyright-statement)
+  - [Smiley Face](#smiley-face)
+  - [Credits](#credits)
 
 
 ## Nomenclature
@@ -375,7 +380,7 @@ The exception here is `MonoBehaviour` as that's what the class is actually calle
 The following copyright statement should be included at the top of every source file:
 
     /*
-     * Copyright (c) 2022 Razeware LLC
+     * Copyright (c) 2022 Kodeco LLC
      * 
      * Permission is hereby granted, free of charge, to any person obtaining a copy
      * of this software and associated documentation files (the "Software"), to deal
