@@ -1,20 +1,7 @@
-# The Official kodeco.com C# Style Guide
-
-This style guide is different from others you may find, because the focus is
-centered on readability for print and the web. We created this style guide to
-keep the code in our tutorials consistent.  
-
-Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
-
-## Inspiration
-
-This style guide is based on C# and Unity conventions. 
-
 ## Table of Contents
 
 - [The Official kodeco.com C# Style Guide](#the-official-kodecocom-c-style-guide)
   - [Inspiration](#inspiration)
-  - [Table of Contents](#table-of-contents)
   - [Nomenclature](#nomenclature)
     - [Namespaces](#namespaces)
     - [Classes & Interfaces](#classes--interfaces)
@@ -41,6 +28,20 @@ This style guide is based on C# and Unity conventions.
   - [Copyright Statement](#copyright-statement)
   - [Smiley Face](#smiley-face)
   - [Credits](#credits)
+
+# The Official kodeco.com C# Style Guide
+
+This style guide is different from others you may find, because the focus is
+centered on readability for print and the web. We created this style guide to
+keep the code in our tutorials consistent.  
+
+Our overarching goals are **conciseness**, **readability** and **simplicity**. Also, this guide is written to keep **Unity** in mind. 
+
+## Inspiration
+
+This style guide is based on C# and Unity conventions. 
+
+
 
 
 ## Nomenclature
