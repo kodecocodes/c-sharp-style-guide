@@ -1,4 +1,4 @@
-# The Official raywenderlich.com C# Style Guide
+# The Official kodeco.com C# Style Guide
 
 This style guide is different from others you may find, because the focus is
 centered on readability for print and the web. We created this style guide to
@@ -12,7 +12,7 @@ This style guide is based on C# and Unity conventions.
 
 ## Table of Contents
 
-- [The Official raywenderlich.com C# Style Guide](#the-official-raywenderlichcom-c-style-guide)
+- [The Official kodeco.com C# Style Guide](#the-official-kodecocom-c-style-guide)
   - [Inspiration](#inspiration)
   - [Table of Contents](#table-of-contents)
   - [Nomenclature](#nomenclature)
@@ -54,13 +54,13 @@ Namespaces are all **PascalCase**, multiple words concatenated together, without
 **AVOID**:
 
 ```csharp
-com.raywenderlich.fpsgame.hud.healthbar
+com.kodeco.fpsgame.hud.healthbar
 ```
 
 **PREFER**:
 
 ```csharp
-RayWenderlich.FPSGame.HUD.Healthbar
+Kodeco.FPSGame.HUD.Healthbar
 ```
 
 ### Classes & Interfaces
@@ -207,7 +207,7 @@ IRadialSlider
 
 ## Spacing
 
-Spacing is especially important in raywenderlich.com code, as code needs to be easily readable as part of the tutorial. 
+Spacing is especially important in kodeco.com code, as code needs to be easily readable as part of the tutorial. 
 
 ### Indentation
 
@@ -415,8 +415,8 @@ In this repository, copy the **ScripTemplates** folder into your own Unity **Ass
 
 ## Smiley Face
 
-Smiley faces are a very prominent style feature of the raywenderlich.com site!
-It is very important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
+Smiley faces are prominent style feature of the kodeco.com site!
+It's important to have the correct smile signifying the immense amount of happiness and excitement for the coding topic. The closing square bracket ] is used because it represents the largest smile able to be captured using ASCII art. A closing parenthesis ("**:)**") creates a half-hearted smile, and thus is not preferred.
 
 **AVOID**:
 
@@ -431,7 +431,7 @@ It is very important to have the correct smile signifying the immense amount of 
 ## Credits
 
 This style guide is a collaborative effort from the most stylish
-raywenderlich.com team members:
+kodeco.com team members:
 
 - [Darryl Bayliss](https://github.com/DarrylBayliss)
 - [Sam Davies](https://github.com/sammyd)
