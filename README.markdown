@@ -29,7 +29,7 @@
   - [Smiley Face](#smiley-face)
   - [Credits](#credits)
 
-# The Official kodeco.com C# Style Guide
+# The Official Kodeco C# Style Guide
 
 This style guide is different from others you may find, because the focus is
 centered on readability for print and the web. We created this style guide to
@@ -381,7 +381,7 @@ The exception here is `MonoBehaviour` as that's what the class is actually calle
 The following copyright statement should be included at the top of every source file:
 
     /*
-     * Copyright (c) 2022 Kodeco LLC
+     * Copyright (c) 2023 Kodeco Inc.
      * 
      * Permission is hereby granted, free of charge, to any person obtaining a copy
      * of this software and associated documentation files (the "Software"), to deal
